@@ -1,0 +1,32 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+*.local
+
+# Variáveis de ambiente (nunca versionar — ver contracts/security-and-headers.md)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Relatórios de auditoria
+lighthouse-report.html
+
+# Editor / SO
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.vscode/*
+!.vscode/extensions.json
+.idea/
+dist-ssr/

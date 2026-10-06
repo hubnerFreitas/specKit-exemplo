@@ -1,0 +1,11 @@
+{
+  "name": "Patas Felizes — Pet Shop e Banho e Tosa",
+  "short_name": "Patas Felizes",
+  "description": "Banho e tosa, veterinária e loja para cães e gatos na Vila Mariana, São Paulo.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4b4a",
+  "lang": "pt-BR",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

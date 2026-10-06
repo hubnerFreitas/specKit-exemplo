@@ -1,0 +1,60 @@
+{
+  "name": "petshop-home",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Home page comercial do petshop",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "lint": "oxlint",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "validate:content": "vite-node scripts/validate-content.ts",
+    "prerender": "node scripts/prerender.mjs",
+    "build": "npm run validate:content && npm run typecheck && npm run build:client && npm run build:ssr && npm run prerender",
+    "preview": "vite preview",
+    "serve:dist": "serve dist -l 4173",
+    "audit:perf": "lighthouse http://localhost:4173 --preset=desktop --form-factor=mobile --screenEmulation.mobile --throttling-method=simulate --output=html --output-path=./lighthouse-report.html --chrome-flags=\"--headless\"",
+    "audit:a11y": "axe http://localhost:4173 --exit",
+    "audit:deps": "npm audit --omit=dev",
+    "lint:fix": "oxlint --fix",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-prerender.tsx --outDir dist-ssr"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "5.9.1",
+    "@radix-ui/react-dialog": "1.2.0",
+    "@radix-ui/react-label": "2.1.16",
+    "@radix-ui/react-slot": "1.4.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "1.52.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-hook-form": "7.89.0",
+    "tailwind-merge": "3.7.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "4.13.0",
+    "@tailwindcss/vite": "4.3.3",
+    "@types/node": "26.6.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "lighthouse": "13.5.0",
+    "oxlint": "1.87.0",
+    "prettier": "3.9.9",
+    "prettier-plugin-tailwindcss": "0.8.1",
+    "serve": "14.2.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "vite": "8.3.3",
+    "vite-imagetools": "12.0.1",
+    "vite-node": "6.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

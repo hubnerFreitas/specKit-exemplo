@@ -1,0 +1,99 @@
+/* ============================================================================
+   Tokens de design — fonte ÚNICA de valores visuais do projeto.
+   Princípio V da Constituição: nenhum valor visual "mágico" fora daqui.
+   Ver specs/001-petshop-home-comercial/contracts/component-contracts.md
+   ============================================================================ */
+
+@theme {
+  /* -- Marca ---------------------------------------------------------------
+     Verde-petróleo: transmite cuidado clínico e confiança, sem o infantilismo
+     do pet shop genérico. Contraste verificado contra surface e foreground. */
+  --color-brand-50: oklch(0.971 0.021 180.5);
+  --color-brand-100: oklch(0.941 0.042 179.8);
+  --color-brand-200: oklch(0.885 0.072 180.2);
+  --color-brand-300: oklch(0.805 0.098 181.4);
+  --color-brand-400: oklch(0.712 0.105 183.1);
+  --color-brand-500: oklch(0.618 0.099 185.2);
+  --color-brand-600: oklch(0.524 0.085 187.6);
+  --color-brand-700: oklch(0.442 0.071 189.3);
+  --color-brand-800: oklch(0.372 0.058 190.8);
+  --color-brand-900: oklch(0.315 0.046 192.4);
+
+  /* -- Acento --------------------------------------------------------------
+     Âmbar quente para elementos de prova e destaque pontual. */
+  --color-accent-100: oklch(0.954 0.052 85.2);
+  --color-accent-300: oklch(0.858 0.118 82.4);
+  --color-accent-500: oklch(0.762 0.148 73.6);
+  --color-accent-700: oklch(0.588 0.128 62.1);
+
+  /* -- Superfícies e texto -------------------------------------------------
+     Contrastes: foreground/surface = 15.8:1; foreground-muted/surface = 7.1:1;
+     foreground/surface-muted = 14.2:1. Todos acima de 4.5:1 (AC-023). */
+  --color-surface: oklch(1 0 0);
+  --color-surface-muted: oklch(0.976 0.004 180);
+  --color-surface-inverse: oklch(0.252 0.032 191);
+  --color-foreground: oklch(0.228 0.014 192);
+  --color-foreground-muted: oklch(0.468 0.014 192);
+  --color-foreground-inverse: oklch(0.982 0.006 180);
+  --color-border: oklch(0.898 0.008 185);
+  --color-border-strong: oklch(0.812 0.014 185);
+
+  /* -- Estados ------------------------------------------------------------- */
+  /* L reduzida para atingir >= 4.5:1 sobre --color-success-soft (AC-023). */
+  --color-success: oklch(0.432 0.102 148.2);
+  --color-success-soft: oklch(0.948 0.038 148.6);
+  --color-danger: oklch(0.518 0.182 26.4);
+  --color-danger-soft: oklch(0.954 0.028 24.8);
+
+  /* -- Tipografia ----------------------------------------------------------
+     Fontes auto-hospedadas (research.md R-06): nenhuma requisição externa. */
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    sans-serif;
+  --font-display:
+    'Fraunces', ui-serif, Georgia, 'Times New Roman', serif;
+
+  /* Corpo de 16px no mobile é piso constitucional (FR-034). */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.3125rem;
+  --text-2xl: 1.5625rem;
+  --text-3xl: 1.9375rem;
+  --text-4xl: 2.375rem;
+  --text-5xl: 3rem;
+
+  /* -- Espaçamento --------------------------------------------------------- */
+  --spacing-section: 4.5rem;
+  --spacing-section-lg: 7rem;
+  --spacing-gutter: 1.25rem;
+
+  /* -- Raios --------------------------------------------------------------- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius-pill: 999px;
+
+  /* -- Elevação ------------------------------------------------------------
+     Uma sombra de card, usada consistentemente (Princípio V). */
+  --shadow-card: 0 1px 2px oklch(0.228 0.014 192 / 0.04), 0 4px 16px oklch(0.228 0.014 192 / 0.06);
+  --shadow-card-hover:
+    0 2px 4px oklch(0.228 0.014 192 / 0.06), 0 12px 28px oklch(0.228 0.014 192 / 0.1);
+  --shadow-bar: 0 -2px 16px oklch(0.228 0.014 192 / 0.1);
+
+  /* -- Alvo de toque mínimo (FR-034 / AC-019) ------------------------------ */
+  --size-touch-target: 2.75rem;
+
+  /* -- Largura de conteúdo ------------------------------------------------- */
+  --container-content: 75rem;
+  --container-prose: 42rem;
+
+  /* -- Altura do header fixo, usada no scroll-margin das âncoras ----------- */
+  --size-header: 4rem;
+  --size-header-lg: 4.75rem;
+
+  /* -- Altura da barra fixa de contato no mobile (AC-008) ------------------ */
+  --size-mobile-bar: 4rem;
+}
